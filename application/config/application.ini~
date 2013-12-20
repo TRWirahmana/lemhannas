@@ -1,0 +1,119 @@
+[bootstrap]
+	;Create autoload namespaces
+		Autoloadernamespaces[] = "Zend_"
+		Autoloadernamespaces[] = "Initapp_"
+		Autoloadernamespaces[] = "Default_"
+
+	;Set default module
+		resources.frontController.moduleDirectory = APPLICATION_PATH"/modules"
+		resources.frontController.defaultModule = "default"
+		resources.frontController.throwErrors = false
+		resources.modules[] = ""
+
+	;Registering plugin
+		;Hooks Plugin
+		resources.frontController.plugins.Hook = "Initapp_Controller_Plugin_Hook"
+
+		;Layout Plugin
+		resources.layout.pluginClass = "Initapp_Controller_Plugin_ModuleBasedLayout"
+
+	;Setup layout
+		resources.layout.layout = "layout"
+
+	;Setup view
+		resources.view.encoding = "UTF-8"
+		resources.view.basePath = APPLICATION_PATH "/views/"
+	
+	;Define bootstrap
+		bootstrap.path = APPLICATION_PATH "/Bootstrap.php"
+		bootstrap.class = "Bootstrap"
+	
+	;Database settings
+		;default db
+		resources.multidb.default_db.adapter  = "pdo_mysql"
+		resources.multidb.default_db.host     = "localhost"
+		resources.multidb.default_db.username = "root"
+		resources.multidb.default_db.password =
+		resources.multidb.default_db.dbname   = "kink"
+		resources.multidb.default_db.default  = true
+		resources.multidb.default_db.profiler.enabled = true
+		resources.multidb.default_db.profiler.class   = "Zend_Db_Profiler_Firebug"
+
+	; this example below shown how to use multiple database
+		;secondary db
+		;resources.multidb.admin_db.adapter  = "pdo_mysql"
+		;resources.multidb.admin_db.host     = "localhost"
+		;resources.multidb.admin_db.username = "root"
+		;resources.multidb.admin_db.password =
+		;resources.multidb.admin_db.dbname   = "indoradio"
+		;resources.multidb.admin_db.default  = false
+		;resources.multidb.admin_db.profiler.enabled = false
+		;resources.multidb.admin_db.profiler.class   = "Zend_Db_Profiler_Firebug"
+
+		;third db
+		;resources.multidb.third_db.adapter  = "pdo_mysql"
+		;resources.multidb.third_db.host     = "localhost"
+		;resources.multidb.third_db.username = "root"
+		;resources.multidb.third_db.password =
+		;resources.multidb.third_db.dbname   = "web"
+		;resources.multidb.third_db.default  = false
+		;resources.multidb.third_db.profiler.enabled = false
+		;resources.multidb.third_db.profiler.class   = "Zend_Db_Profiler_Firebug"
+
+	;Session
+		session.auto_start = 0
+		resources.session.save_path           = APPLICATION_PATH "/sessions"
+		resources.session.use_only_cookies    = true
+		resources.session.remember_me_seconds = 86400
+
+
+[production : bootstrap]
+
+	resources.multidb.default_db.profiler.enabled = false
+	resources.multidb.default_db.profiler.class   = "Zend_Db_Profiler_Firebug"
+
+	phpSettings.display_startup_errors = 0
+	phpSettings.display_errors         = 0
+	settings.debug.enabled             = false
+	
+	resources.frontController.throwErrors = false
+	
+	settings.application.datetime = "Asia/Jakarta"
+	
+[qa : production]
+	
+	resources.multidb.default_db.profiler.enabled = false
+	resources.multidb.default_db.profiler.class   = "Zend_Db_Profiler_Firebug"
+
+	phpSettings.display_startup_errors = 0
+	phpSettings.display_errors         = 0
+	settings.debug.enabled             = false
+	
+	resources.frontController.throwErrors = false
+	
+	settings.application.datetime = "Asia/Jakarta"
+	
+[testing : qa]
+
+	resources.frontController.throwErrors = false
+	
+	phpSettings.display_startup_errors = 0
+	phpSettings.display_errors         = 0
+	settings.debug.enabled = false
+	
+	settings.application.datetime = "Asia/Jakarta"
+	
+	resources.multidb.default_db.profiler.enabled = true
+	resources.multidb.default_db.profiler.class   = "Zend_Db_Profiler_Firebug"
+	
+[development : testing]
+
+	phpSettings.display_startup_errors = 1
+	phpSettings.display_errors         = 1
+	
+	resources.frontController.throwErrors = true
+	
+	settings.application.datetime = "Europe/Bucharest"
+	
+	resources.multidb.default_db.profiler.enabled = true
+	resources.multidb.default_db.profiler.class   = "Zend_Db_Profiler_Firebug"

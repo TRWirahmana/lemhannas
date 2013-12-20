@@ -1,0 +1,56 @@
+<?php echo $this->doctype(); ?>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lemhannas</title>
+  <meta name="description" content="Lemhannas Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="<?php echo $this->baseUrl('apple-touch-icon-precomposed.png'); ?>">
+  <link rel="shortcut icon" href="<?php echo $this->baseUrl('img/favicon.ico'); ?>">
+
+  <?php
+        $this->headLink()
+            ->appendStylesheet($this->cssUrl('bootstrap.min.css'))
+            ->appendStylesheet($this->cssUrl('rulycon.min.css'))
+            ->appendStylesheet($this->cssUrl('lemhannas.css'))
+        ;
+        $this->headScript()
+            ->appendFile($this->jsUrl('jquery-1.7.2.min.js'))
+            ->appendFile($this->jsUrl('bootstrap.min.js'))
+            ->appendFile($this->jsUrl('vendor/highchart/highstock.js'))
+            ->appendFile($this->jsUrl('vendor/highchart/modules/exporting.js'))
+        ;
+    ?>
+
+    <?php
+        echo $this->headLink();
+        echo $this->headStyle();
+        echo $this->placeholder('stylesinline');
+        echo $this->headScript();
+    ?>
+</head>
+<body>
+    <div id="main-container">
+    <div id="sidebar">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accent"></div><img src=" <?php echo $this->baseUrl('img/logo-lemhannas.png'); ?>" alt="Lemhannas" class="logo">
+          <div id="user-menu">
+            <p class="text-center"><a href="#"><span class="rulycon-user-4"></span>User settings</a><a href="#"><span class="rulycon-switch"></span>Sign out</a></p>
+          </div>
+            <!-- render ke sidebar menu -->
+            <div id="dashboard-menu">
+                <?php echo $this->render('menu/menu.phtml') ?>
+            </div>
+      </div>
+      <h6 id="copyright">Hak cipta © 2013 Lembaga Ketahanan Nasional.<br>Semua hak dilindungi.</h6>
+    </div>
+    <!-- untuk merender content -->
+    <div id="content">
+	   <?php echo $this->layout()->content; ?>
+    </div>
+</body>
+</html>
+
