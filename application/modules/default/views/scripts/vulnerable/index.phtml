@@ -1,3 +1,21 @@
+<style type="text/css">
+    br { clear: both; }
+    .cntSeparator {
+        font-size: 54px;
+        margin: 10px 7px;
+        color: #000;
+    }
+    .desc { margin: 7px 3px; }
+    .desc div {
+        float: left;
+        font-family: Arial;
+        width: 70px;
+        margin-right: 65px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+    }
+</style>
 <!-- VULNERABLE CHECK PAGE-->
       <div class="row">
         <div class="col-lg-12">
@@ -9,16 +27,10 @@
           <form class="form-inline">
             <div class="form-group">
               <label>Start time</label>
-              <select id="start_time">
-                <option>~select start time~</option>
-                <option>ganti pake date picker</option>
-              </select>
+              <input id="start-time" class="datepicker">
               <label>End time</label>
-              <select id="start_time">
-                <option>~select end time~</option>
-                <option>ganti pake date picker</option>
-              </select>
-              <button class="btn btn-lemhannas">Show vulnerability data</button>
+              <input id="end-time" class="datepicker">
+              <button class="btn btn-lemhannas" id="submit-date">Show vulnerability data</button>
             </div>
           </form>
         </div>
@@ -40,15 +52,16 @@
           <form class="form-inline">
             <div class="form-group">
               <label>Auto-update every</label>
-              <select>
-                <option>~select auto-update period~</option>
-                <option>15 detik</option>
-                <option>30 detik</option>
-                <option>1 menit</option>
-                <option>3 menit</option>
-                <option>5 menit</option>
+              <select id="auto-update">
+                <option value="0">~select auto-update period~</option>
+                <option value="1">15 detik</option>
+                <option value="2">30 detik</option>
+                <option value="3">1 menit</option>
+                <option value="4">3 menit</option>
+                <option value="5">5 menit</option>
               </select>
-              <button class="btn btn-lemhannas pull-right">Refresh</button>
+                <div id="counter_2"></div>
+              <button class="btn btn-lemhannas pull-right" id="refresh">Refresh</button>
             </div>
           </form>
         </div>
@@ -68,7 +81,7 @@
             null,
             null,
             null,
-            null,
+            null
         ],
         "sScrollY": "100%",
         "sScrollX": "100%",
@@ -82,11 +95,15 @@
             //filter category content
             if(jQuery('#feed-filter').length)
             {
-                filter = jQuery('#feed-filter').val()
+                var start_date = jQuery('#start-date').val();
+                var end_date = jQuery('#end-date').val();
 
                 aoData.push({
-                    "name": "filter",
-                    "value":  filter
+                    "name": "start_date",
+                    "value":  start_date
+                },{
+                    "name": "end_date",
+                    "value":  end_date
                 });
             }
 
@@ -100,4 +117,41 @@
             $('.custom-rows').parent().css('vertical-align','middle');
         }
     });
+
+    $('#submit-date').click(function(){
+        oTable.fnDraw();
+    });
+
+    $('#refresh').click(function(){
+        oTable.fnDraw();
+    });
+
+    $('#auto-update').change(function(){
+        var time;
+        switch ($('#auto-update').val())
+        {
+            case 0:
+                return null;
+                break;
+            case 1:
+                time = 15000;
+                break;
+            case 2:
+                time = 30000;
+                break;
+            case 3:
+                time = 60000;
+                break;
+            case 4:
+                time = 180000;
+                break;
+            case 5:
+                time = 600000;
+                break;
+        }
+    });
+
+    setInterval(function(){
+
+    }, 2000)
 </script>
