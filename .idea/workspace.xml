@@ -23,46 +23,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="VulnerableController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/VulnerableController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="5" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.576923" vertical-offset="25" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vulnerable.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/models/DbTable/Vulnerable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="49" selection-start="2217" selection-end="2217" vertical-scroll-proportion="-16.692308" vertical-offset="297" max-vertical-offset="1173">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/index/index.phtml">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/vulnerable/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="37" selection-end="37" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1122">
+            <state line="18" column="40" selection-start="723" selection-end="723" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1836">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/menu/menu.phtml">
+      <file leaf-file-name="layout.phtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/layouts/layout.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="6" selection-start="847" selection-end="847" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272">
+            <state line="33" column="13" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.7324955" vertical-offset="153" max-vertical-offset="1326">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/error/error.phtml">
+      <file leaf-file-name="Vulnerable.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/default/models/Entities/Vulnerable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.ini" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/config/application.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="49" selection-start="3293" selection-end="3293" vertical-scroll-proportion="2.2764504" vertical-offset="315" max-vertical-offset="2125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/default/models/DbTable/Category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="41" selection-start="159" selection-end="159" vertical-scroll-proportion="-0.65384614" vertical-offset="51" max-vertical-offset="1003">
+            <state line="16" column="31" selection-start="654" selection-end="654" vertical-scroll-proportion="-7.1923075" vertical-offset="85" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -79,7 +79,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/application/modules/default/views/scripts/menu/menu.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/controllers/VulnerableController.php" />
         <option value="$PROJECT_DIR$/application/config/application.ini" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/DbTable/Vulnerable.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/models/Entities/Vulnerable.php" />
+        <option value="$PROJECT_DIR$/application/modules/default/views/scripts/vulnerable/index.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/default/layouts/layout.phtml" />
       </list>
     </option>
   </component>
@@ -87,8 +92,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="744" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -200,6 +205,10 @@
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vulnerable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -298,10 +307,6 @@
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="error" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -381,7 +386,115 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="DbTable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lemhannas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,7 +524,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\lemhannas\application\modules\default\views\scripts\index" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -424,18 +555,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24231333" sideWeight="0.670418" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -461,35 +592,91 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="37" selection-end="37" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1122">
+        <state line="2" column="12" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/menu/menu.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="847" selection-end="847" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/error/error.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/default/models/DbTable/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="159" selection-end="159" vertical-scroll-proportion="-0.65384614" vertical-offset="51" max-vertical-offset="1003">
+        <state line="10" column="6" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="272">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/application.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="49" selection-start="3293" selection-end="3293" vertical-scroll-proportion="2.2764504" vertical-offset="315" max-vertical-offset="2125">
+        <state line="97" column="49" selection-start="3293" selection-end="3293" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/menu/menu.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="6" selection-start="847" selection-end="847" vertical-scroll-proportion="0.2982456" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/library/Initapp/Model/DbTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="67" selection-start="107" selection-end="129" vertical-scroll-proportion="0.1491228" vertical-offset="0" max-vertical-offset="2788">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/library/Model/DbTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="55" selection-start="61" selection-end="61" vertical-scroll-proportion="0.02982456" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/application.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="58" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.51342285" vertical-offset="306" max-vertical-offset="2142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/controllers/VulnerableController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="5" selection-start="288" selection-end="288" vertical-scroll-proportion="-5.576923" vertical-offset="25" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/models/DbTable/Vulnerable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="49" selection-start="2217" selection-end="2217" vertical-scroll-proportion="-16.692308" vertical-offset="297" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/models/Entities/Vulnerable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="654" selection-end="654" vertical-scroll-proportion="-7.1923075" vertical-offset="85" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/vulnerable/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="723" selection-end="723" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/default/layouts/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="13" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.7324955" vertical-offset="153" max-vertical-offset="1326">
           <folding />
         </state>
       </provider>

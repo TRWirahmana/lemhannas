@@ -14,15 +14,24 @@
         $this->headLink()
             ->appendStylesheet($this->cssUrl('bootstrap.min.css'))
             ->appendStylesheet($this->cssUrl('rulycon.min.css'))
+            ->appendStylesheet($this->cssUrl('jquery-ui-1.10.3.custom.min.css'))
             ->appendStylesheet($this->cssUrl('lemhannas.css'))
         ;
         $this->headScript()
             ->appendFile($this->jsUrl('jquery-1.7.2.min.js'))
+            ->appendFile($this->jsUrl('jquery-ui-1.10.3.custom.min.js'))
             ->appendFile($this->jsUrl('bootstrap.min.js'))
+            ->appendFile($this->jsUrl('DataTables/js/jquery.dataTables.min.js'))
             ->appendFile($this->jsUrl('vendor/highchart/highstock.js'))
             ->appendFile($this->jsUrl('vendor/highchart/modules/exporting.js'))
         ;
     ?>
+
+    <script type="text/javascript">
+        var jsUrl = "<?php echo $this->SiteUrl(); ?>";
+        var imgUrl = "<?php echo $this->ImageUrl(); ?>";
+        var baseUrl = '<?php echo $this->BaseUrl(); ?>';
+    </script>
 
     <?php
         echo $this->headLink();
@@ -30,6 +39,13 @@
         echo $this->placeholder('stylesinline');
         echo $this->headScript();
     ?>
+
+    <script>
+        $(function() {
+            $( ".datepicker" ).datepicker();
+        });
+    </script>
+
 </head>
 <body>
     <div id="main-container">
