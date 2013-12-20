@@ -6,7 +6,7 @@ class Default_Model_DbTable_Vulnerable extends Zend_Db_Table_Abstract
     protected $_tableName = 'VulnerabilityLogs';
     protected $_primary = 'Id';
 
-    public function listTable($limit = false, $offset, $search = '', $sortColumn, $order, $isCount = false)
+    public function listTable($limit = false, $offset, $search = '', $sortColumn, $order, $isCount = false, $start_date = null, $end_date = null)
     {
         $query = $this->select()->setIntegrityCheck(FALSE)
                       ->from(array('vl' => $this->_tableName), array('vl.Id', 'vl.VulnerabilityId'))
@@ -15,6 +15,14 @@ class Default_Model_DbTable_Vulnerable extends Zend_Db_Table_Abstract
                         ->joinLeft(array('nc' => 'NetworkClients'), 'vl."MacAddress" = nc."MacAddress"',
                                 array('nc.Hostname', 'nc.OperatingSystem', 'nc.Received'))
         ;
+
+        if($start_date != null && $end_date != null)
+        {
+            $query->join(array('ss' => 'ScanSessions'), 'vl."ScanSession" = ss."id"', array())
+                    ->where('ss.Timestamp > ?', $start_date)
+                    ->where('ss.Timestamp < ?', $end_date)
+            ;
+        }
 
         if($search != ''){
             $query->where('vt."Name" like ' . "'" . '%' . $search . '%' . "'")
