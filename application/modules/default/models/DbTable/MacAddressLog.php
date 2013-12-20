@@ -5,7 +5,7 @@ class Default_Model_DbTable_MacAddressLog extends Zend_Db_Table_Abstract
     protected $_tableName = 'public.NetworkClients';
     protected $_primary = 'MacAddress';
 
-    public function listTable($limit = false, $offset, $search = '', $sortColumn, $order, $isCount = false)
+    public function listTable($limit = false, $offset, $search = '', $sortColumn, $order, $isCount = false, $start_date = null, $end_date = null)
     {
         $query = $this->select()
             ->setIntegrityCheck(false)
@@ -16,6 +16,12 @@ class Default_Model_DbTable_MacAddressLog extends Zend_Db_Table_Abstract
                 'macaddress.Received',
                 'macaddress.Status'
             ));
+
+        if($start_date != null && $end_date != null){
+            $query->where('macaddress."RegisteredTimestamp"  > ?', $start_date )
+                ->where('macaddress."RegisteredTimestamp" < ?', $end_date)
+            ;
+        }
 
         if($search != ''){
             $query->where('macaddress."MacAddress" = ' . $search )

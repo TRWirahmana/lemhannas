@@ -9,16 +9,10 @@
         <form class="form-inline">
             <div class="form-group">
                 <label>Start time</label>
-                <select>
-                    <option>~select start time~</option>
-                    <option>ganti pake date picker</option>
-                </select>
+                <input id="start-time" class="datepicker">
                 <label>End time</label>
-                <select>
-                    <option>~select end time~</option>
-                    <option>ganti pake date picker</option>
-                </select>
-                <button class="btn btn-lemhannas">Show MAC address log</button>
+                <input id="end-time" class="datepicker">
+                <button class="btn btn-lemhannas" id="submit-date">Show vulnerability data</button>
             </div>
         </form>
     </div>
@@ -42,13 +36,13 @@
         <form class="form-inline">
             <div class="form-group">
                 <label>Auto-update every</label>
-                <select>
-                    <option>~select auto-update period~</option>
-                    <option>15 detik</option>
-                    <option>30 detik</option>
-                    <option>1 menit</option>
-                    <option>3 menit</option>
-                    <option>5 menit</option>
+                <select id="auto-update">
+                    <option value="0">~select auto-update period~</option>
+                    <option value="1">15 detik</option>
+                    <option value="2">30 detik</option>
+                    <option value="3">1 menit</option>
+                    <option value="4">3 menit</option>
+                    <option value="5">5 menit</option>
                 </select>
                 <button class="btn btn-lemhannas pull-right">Refresh</button>
             </div>
@@ -122,6 +116,7 @@
 
 <script type="text/javascript">
 
+    var interval = null;
 //    var $tbl_data;
 
 var oTable = $('#mac-address-log-table').dataTable( {
@@ -169,6 +164,50 @@ var oTable = $('#mac-address-log-table').dataTable( {
         $('.custom-rows').parent().css('vertical-align','middle');
     }
 });
+
+    $('#submit-date').click(function(){
+        oTable.fnDraw();
+    });
+
+    $('#refresh').click(function(){
+        oTable.fnDraw();
+    });
+
+    $('#auto-update').change(function(){
+        switch ($('#auto-update').val())
+        {
+            case '0':
+                stopInterval();
+                break;
+            case '1':
+                startInterval(2000);
+                break;
+            case '2':
+                startInterval(30000);
+                break;
+            case '3':
+                startInterval(60000);
+                break;
+            case '4':
+                startInterval(180000);
+                break;
+            case '5':
+                startInterval(600000);
+                break;
+        }
+    });
+
+    function startInterval(time)
+    {
+        interval = setInterval(function(){
+            oTable.fnDraw();
+        }, time)
+    }
+
+    function stopInterval()
+    {
+        clearInterval(interval);
+    }
 
 //    var tbl_data = $("#mac-address-log-table").dataTable({
 //        bFilter: false,

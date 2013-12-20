@@ -2,14 +2,14 @@
 class Default_Model_Entities_MacAddressLog
 {
     public function datatablesJSONApi($sEcho, $limit = 0, $offset = 0, $sortColumn = 0, $order = 'ASC',
-                                      $filter = '', $search = '')
+                                      $search = '', $start_date = null, $end_date = null)
     {
         $tableNews = new Default_Model_DbTable_MacAddressLog();
         // $list = new Cms_Model_DbTable_List();
 
-        $data = $tableNews->listTable($limit, $offset, $sortColumn, $order, $filter, $search, $count = false);
+        $data = $tableNews->listTable($limit, $offset, $sortColumn, $order, $search, $count = false, $start_date, $end_date);
 
-        $queryrowsCount = $tableNews->listTable($limit, $offset, $sortColumn, $order, $filter, $search, $count = true);
+        $queryrowsCount = $tableNews->listTable($limit, $offset, $sortColumn, $order, $search, $count = true, $start_date, $end_date);
 
         $jsonString = array();
 

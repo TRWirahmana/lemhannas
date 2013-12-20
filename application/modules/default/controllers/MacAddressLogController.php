@@ -19,7 +19,7 @@ class MacAddressLogController extends Default_Library_Controller_Action_Abstract
         $this->getHelper('viewRenderer')->setNoRender(true);
         $this->getHelper('layout')->disableLayout();
 
-        //init Model Penyalur
+        //init
         $model = new Default_Model_Entities_MacAddressLog();
         // Param
         $sEcho = intval( $this->_getParam( 'sEcho' ) );
@@ -31,12 +31,12 @@ class MacAddressLogController extends Default_Library_Controller_Action_Abstract
         $sortColumn = $this->_getParam( 'iSortCol_0' );
         $order = $this->_getParam( 'sSortDir_0' );
         //custom filter
-        $filter = $this->_getParam( 'filter' );
+        $start_date = $this->_getParam( 'start_date' );
+        $end_date = $this->_getParam( 'end_date' );
 
         //get rows
         $jsonString = $model->datatablesJSONApi($sEcho, $limit, $offset,
-            $sortColumn, $order,
-            $filter, $sSearch);
+            $sortColumn, $order, $sSearch, $start_date, $end_date);
 
         echo  $jsonString;
     }
