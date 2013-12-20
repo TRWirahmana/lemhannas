@@ -1,0 +1,121 @@
+<!-- MAC ADDRESS LOG PAGE-->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 id="page-title"><span>·<span>·</span>· MAC address log ·<span>·</span>·</span></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Start time</label>
+                <select>
+                    <option>~select start time~</option>
+                    <option>ganti pake date picker</option>
+                </select>
+                <label>End time</label>
+                <select>
+                    <option>~select end time~</option>
+                    <option>ganti pake date picker</option>
+                </select>
+                <button class="btn btn-lemhannas">Show MAC address log</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <!-- property untuk datatable -->
+        <table id="mac-address-log-table" class="table table-hover table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>MAC</th>
+                <th>Hostname</th>
+                <th>Operating system</th>
+                <th>Bandwith usage</th>
+                <th>Status</th>
+                <th>Modify</th>
+            </tr>
+            </thead>
+        </table>
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Auto-update every</label>
+                <select>
+                    <option>~select auto-update period~</option>
+                    <option>15 detik</option>
+                    <option>30 detik</option>
+                    <option>1 menit</option>
+                    <option>3 menit</option>
+                    <option>5 menit</option>
+                </select>
+                <button class="btn btn-lemhannas pull-right">Refresh</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- PUT ALL MODALS BELOW-->
+<div id="add-modal" tab-index="-1" role="dialog" aria-labelledby="add-modal-label" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                <h4 id="add-modal-lable" class="modal-title">Add</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">MAC address</label>
+                        <div class="col-lg-9">
+                            <input type="text" placeholder="type MAC address here..." value="192.168.0.193" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Hostname</label>
+                        <div class="col-lg-9">
+                            <input type="text" placeholder="type hostname here..." value="fulan-06-PC" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Description</label>
+                        <div class="col-lg-9">
+                            <textarea rows="4" placeholder="type description here..." class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Is blocked</label>
+                        <div class="col-lg-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lemhannas">Add</button>
+                <button type="button" data-dismiss="modal" class="btn btn-lemhannas">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="delete-modal" tab-index="-1" role="dialog" aria-labelledby="delete-modal-label" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                <h4 id="delete-modal-lable" class="modal-title">Delete</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the selected item?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lemhannas btn-red">Yes, delete</button>
+                <button type="button" data-dismiss="modal" class="btn btn-lemhannas">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
