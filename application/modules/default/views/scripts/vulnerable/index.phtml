@@ -60,7 +60,6 @@
                 <option value="4">3 menit</option>
                 <option value="5">5 menit</option>
               </select>
-                <div id="counter_2"></div>
               <button class="btn btn-lemhannas pull-right" id="refresh">Refresh</button>
             </div>
           </form>
@@ -68,6 +67,7 @@
       </div>
 
 <script type="text/javascript">
+    var interval = null;
     var oTable = $('#data_table').dataTable( {
         "bJQueryUI": true,
         "sScrollX": "",
@@ -127,31 +127,38 @@
     });
 
     $('#auto-update').change(function(){
-        var time;
         switch ($('#auto-update').val())
         {
-            case 0:
-                return null;
+            case '0':
+                stopInterval();
                 break;
-            case 1:
-                time = 15000;
+            case '1':
+                startInterval(2000);
                 break;
-            case 2:
-                time = 30000;
+            case '2':
+                startInterval(30000);
                 break;
-            case 3:
-                time = 60000;
+            case '3':
+                startInterval(60000);
                 break;
-            case 4:
-                time = 180000;
+            case '4':
+                startInterval(180000);
                 break;
-            case 5:
-                time = 600000;
+            case '5':
+                startInterval(600000);
                 break;
         }
     });
 
-    setInterval(function(){
+    function startInterval(time)
+    {
+        interval = setInterval(function(){
+            oTable.fnDraw();
+        }, time)
+    }
 
-    }, 2000)
+    function stopInterval()
+    {
+        clearInterval(interval);
+    }
 </script>

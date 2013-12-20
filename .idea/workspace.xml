@@ -44,7 +44,7 @@
       <file leaf-file-name="index.phtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/vulnerable/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="19" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.67192984" vertical-offset="2116" max-vertical-offset="2754">
+            <state line="61" column="23" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.43333334" vertical-offset="790" max-vertical-offset="2873">
               <folding />
             </state>
           </provider>
@@ -403,7 +403,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/default/views/scripts/vulnerable/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="19" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.67192984" vertical-offset="2116" max-vertical-offset="2754">
+        <state line="61" column="23" selection-start="2027" selection-end="2027" vertical-scroll-proportion="0.43333334" vertical-offset="790" max-vertical-offset="2873">
           <folding />
         </state>
       </provider>
