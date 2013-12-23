@@ -1,0 +1,42 @@
+doctype 5
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  title Sign In Lemhannas Dashboard
+  meta(name="description", content="Lemhannas Dashboard")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  // Favicons
+  link(rel="apple-touch-icon-precomposed", href="apple-touch-icon-precomposed.png")
+  link(rel="shortcut icon", href="favicon.ico")
+
+  link(rel="stylesheet", href="css/bootstrap.min.css")
+  link(rel="stylesheet", href="css/rulycon.min.css")
+  link(rel="stylesheet", href="css/lemhannas.css")
+
+body
+  .container
+    .row
+      .col-lg-12.text-center
+        img#sign-in-logo(src="img/logo-lemhannas-sign-in.png", alt="Lemhannas Dashboard")
+
+  #sign-in-container
+    .container
+      .row
+        .col-lg-6.col-lg-offset-3
+          form#sign-in-form
+            .form-group
+              label Username
+              input.form-control(type="text", placeholder="type username here...")
+            .form-group
+              label Password
+              input.form-control(type="password", placeholder="type password here...")
+            .form-group
+              button.btn.btn-lemhannas Sign in
+          h6#copyright Hak cipta © 2013 Lembaga Ketahanan Nasional.
+            br
+            | Semua hak dilindungi.
+
+// Scripts
+script(src="js/jquery-1.7.2.min.js")
+script(src="js/bootstrap.min.js")

@@ -1,0 +1,267 @@
+// BANDWITH RULES PAGE
+.row
+  .col-lg-12
+    h1#page-title
+      span ·
+        span·
+        |· Bandwith rules ·
+        span·
+        | ·
+
+.row
+  .col-lg-12
+    form.form-inline
+      .form-group
+        button.btn.btn-lemhannas(data-toggle="modal", data-target="#add-modal") Add new
+        button.btn.btn-lemhannas Enable All
+        button.btn.btn-lemhannas Disable All
+        button.btn.btn-lemhannas.btn-red(data-toggle="modal", data-target="#delete-all-modal") Delete All
+
+.row
+  .col-lg-12
+    table.table.table-hover.table-striped#bandwith-rules-table
+      thead
+        tr
+          th #
+          th Local IP address
+          th Port
+          th Remote IP address
+          th Port
+          th Protocol
+          th Direction
+          th Status
+          th Modify
+      tbody
+        tr
+          td 1
+          td 192.168.0.193
+          td 50031
+          td 61.94.225.166
+          td 28140
+          td TCP
+          td In
+          td Enabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 2
+          td 61.94.225.166
+          td 28410
+          td 192.168.0.193
+          td 50031
+          td TCP
+          td Out
+          td Disabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 3
+          td 61.94.225.166
+          td 28410
+          td 192.168.0.193
+          td 50031
+          td TCP
+          td Out
+          td Disabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 4
+          td 192.168.0.193
+          td 50031
+          td 61.94.225.166
+          td 28140
+          td TCP
+          td In
+          td Enabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 5
+          td 192.168.0.193
+          td 50031
+          td 61.94.225.166
+          td 28140
+          td TCP
+          td In
+          td Enabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 6
+          td 61.94.225.166
+          td 28410
+          td 192.168.0.193
+          td 50031
+          td TCP
+          td Out
+          td Disabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 7
+          td 61.94.225.166
+          td 28410
+          td 192.168.0.193
+          td 50031
+          td TCP
+          td Out
+          td Disabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 8
+          td 192.168.0.193
+          td 50031
+          td 61.94.225.166
+          td 28140
+          td TCP
+          td In
+          td Enabled
+          td
+            a.btn.btn-lemhannas(href="#edit-modal", data-toggle="modal")
+              span.rulycon-pencil
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+
+// PUT ALL MODALS BELOW
+.modal.fade#add-modal(tab-index="-1", role="dialog", aria-labelledby="add-modal-label", aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+        h4.modal-title#add-modal-lable Add new
+      .modal-body
+        form.form-horizontal(role="form")
+          .form-group
+            label.col-lg-3.control-label Local IP
+            .col-lg-9
+              input.form-control(type="text", placeholder="type local IP here...")
+          .form-group
+            label.col-lg-3.control-label Local port
+            .col-lg-9
+              input.form-control(type="text", placeholder="type local port here...")
+          .form-group
+            label.col-lg-3.control-label Remote IP
+            .col-lg-9
+              input.form-control(type="text", placeholder="type remote IP here...")
+          .form-group
+            label.col-lg-3.control-label Remote port
+            .col-lg-9
+              input.form-control(type="text", placeholder="type remote port here...")
+          .form-group
+            label.col-lg-3.control-label Protocol
+            .col-lg-9
+              select.form-control
+                option TCP
+                option UDP
+                option Both
+          .form-group
+            label.col-lg-3.control-label Direction
+            .col-lg-9
+              select.form-control
+                option In
+                option Out
+                option Both
+          .form-group
+            label.col-lg-3.control-label Status
+            .col-lg-9
+              select.form-control
+                option Enabled
+                option Disabled
+      .modal-footer
+        button.btn.btn-lemhannas(type="button") Add new
+        button.btn.btn-lemhannas(type="button", data-dismiss="modal") Cancel
+
+.modal.fade#delete-all-modal(tab-index="-1", role="dialog", aria-labelledby="delete-all-modal-label", aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+        h4.modal-title#delete-modal-lable Delete all
+      .modal-body
+        p Are you sure you want to delete all items?
+      .modal-footer
+        button.btn.btn-lemhannas.btn-red(type="button") Yes, delete
+        button.btn.btn-lemhannas(type="button", data-dismiss="modal") Cancel
+
+.modal.fade#edit-modal(tab-index="-1", role="dialog", aria-labelledby="edit-modal-label", aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+        h4.modal-title#edit-modal-lable Edit
+      .modal-body
+        form.form-horizontal(role="form")
+          .form-group
+            label.col-lg-3.control-label Local IP
+            .col-lg-9
+              input.form-control(type="text", placeholder="type local IP here...", value="192.168.0.193")
+          .form-group
+            label.col-lg-3.control-label Local port
+            .col-lg-9
+              input.form-control(type="text", placeholder="type local port here...", value="28410")
+          .form-group
+            label.col-lg-3.control-label Remote IP
+            .col-lg-9
+              input.form-control(type="text", placeholder="type remote IP here...", value="61.94.225.166")
+          .form-group
+            label.col-lg-3.control-label Remote port
+            .col-lg-9
+              input.form-control(type="text", placeholder="type remote port here...", value="28140")
+          .form-group
+            label.col-lg-3.control-label Protocol
+            .col-lg-9
+              select.form-control
+                option TCP
+                option UDP
+                option Both
+          .form-group
+            label.col-lg-3.control-label Direction
+            .col-lg-9
+              select.form-control
+                option In
+                option Out
+                option Both
+          .form-group
+            label.col-lg-3.control-label Status
+            .col-lg-9
+              select.form-control
+                option Enabled
+                option Disabled
+      .modal-footer
+        button.btn.btn-lemhannas(type="button") Edit
+        button.btn.btn-lemhannas(type="button", data-dismiss="modal") Cancel
+
+.modal.fade#delete-modal(tab-index="-1", role="dialog", aria-labelledby="delete-modal-label", aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+        h4.modal-title#delete-modal-lable Delete
+      .modal-body
+        p Are you sure you want to delete the selected item?
+      .modal-footer
+        button.btn.btn-lemhannas.btn-red(type="button") Yes, delete
+        button.btn.btn-lemhannas(type="button", data-dismiss="modal") Cancel

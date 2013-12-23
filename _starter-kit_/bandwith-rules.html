@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lemhannas</title>
+  <meta name="description" content="Lemhannas Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/rulycon.min.css">
+  <link rel="stylesheet" href="css/lemhannas.css">
+  <!-- Scripts-->
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/vendor/highchart/highstock.js"></script>
+  <script src="js/vendor/highchart/modules/exporting.js"></script>
+</head>
+<body>
+  <div id="main-container">
+    <div id="sidebar">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accent"></div><img src="img/logo-lemhannas.png" alt="Lemhannas" class="logo">
+          <div id="user-menu">
+            <p class="text-center"><a href="#"><span class="rulycon-user-4"></span>User settings</a><a href="#"><span class="rulycon-switch"></span>Sign out</a></p>
+          </div>
+          <div id="dashboard-menu">
+            <h6>Dashboard menu</h6>
+            <ul>
+              <li><a href="index.html"><span class="rulycon-home"></span>Home</a></li>
+              <li><a href="vulnerable-check.html"><span class="rulycon-bug"></span>Vulnerable check</a></li>
+              <li><a href="mac-address-log.html"><span class="rulycon-file"></span>MAC address log</a></li>
+              <li><a href="access-history.html"><span class="rulycon-upload-3"></span>Access history</a></li>
+              <li><a href="bandwith-rules.html"><span class="rulycon-tree"></span>Bandwith rules</a></li>
+              <li><a href="port-and-services.html"><span class="rulycon-switch"></span>Port &amp; Services</a></li>
+              <li><a href="alert-and-notification.html"><span class="rulycon-spam"></span>Alert &amp; Notification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h6 id="copyright">Hak cipta © 2013 Lembaga Ketahanan Nasional.<br>Semua hak dilindungi.</h6>
+    </div>
+    <div id="content">
+      <!-- include index-->
+      <!-- include vulnerable-check-->
+      <!-- include mac-address-log-->
+      <!-- include mac-address-log-detail-->
+      <!-- include access-history-->
+      <!-- include access-history-detail-->
+      <!-- BANDWITH RULES PAGE-->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 id="page-title"><span>·<span>·</span>· Bandwith rules ·<span>·</span>·</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <button data-toggle="modal" data-target="#add-modal" class="btn btn-lemhannas">Add new</button>
+              <button class="btn btn-lemhannas">Enable All</button>
+              <button class="btn btn-lemhannas">Disable All</button>
+              <button data-toggle="modal" data-target="#delete-all-modal" class="btn btn-lemhannas btn-red">Delete All</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <table id="bandwith-rules-table" class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Local IP address</th>
+                <th>Port</th>
+                <th>Remote IP address</th>
+                <th>Port</th>
+                <th>Protocol</th>
+                <th>Direction</th>
+                <th>Status</th>
+                <th>Modify</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>61.94.225.166</td>
+                <td>28140</td>
+                <td>TCP</td>
+                <td>In</td>
+                <td>Enabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>61.94.225.166</td>
+                <td>28410</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>TCP</td>
+                <td>Out</td>
+                <td>Disabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>61.94.225.166</td>
+                <td>28410</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>TCP</td>
+                <td>Out</td>
+                <td>Disabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>61.94.225.166</td>
+                <td>28140</td>
+                <td>TCP</td>
+                <td>In</td>
+                <td>Enabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>61.94.225.166</td>
+                <td>28140</td>
+                <td>TCP</td>
+                <td>In</td>
+                <td>Enabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>61.94.225.166</td>
+                <td>28410</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>TCP</td>
+                <td>Out</td>
+                <td>Disabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>61.94.225.166</td>
+                <td>28410</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>TCP</td>
+                <td>Out</td>
+                <td>Disabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>192.168.0.193</td>
+                <td>50031</td>
+                <td>61.94.225.166</td>
+                <td>28140</td>
+                <td>TCP</td>
+                <td>In</td>
+                <td>Enabled</td>
+                <td><a href="#edit-modal" data-toggle="modal" class="btn btn-lemhannas"><span class="rulycon-pencil"></span></a><a href="#delete-modal" data-toggle="modal" class="btn btn-red"><span class="rulycon-close"></span></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- PUT ALL MODALS BELOW-->
+      <div id="add-modal" tab-index="-1" role="dialog" aria-labelledby="add-modal-label" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+              <h4 id="add-modal-lable" class="modal-title">Add new</h4>
+            </div>
+            <div class="modal-body">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Local IP</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type local IP here..." class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Local port</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type local port here..." class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Remote IP</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type remote IP here..." class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Remote port</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type remote port here..." class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Protocol</label>
+                  <div class="col-lg-9">
+                    <select class="form-control">
+                      <option>TCP</option>
+                      <option>UDP</option>
+                      <option>Both</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Direction</label>
+                  <div class="col-lg-9">
+                    <select class="form-control">
+                      <option>In</option>
+                      <option>Out</option>
+                      <option>Both</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Status</label>
+                  <div class="col-lg-9">
+                    <select class="form-control">
+                      <option>Enabled</option>
+                      <option>Disabled</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-lemhannas">Add new</button>
+              <button type="button" data-dismiss="modal" class="btn btn-lemhannas">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="delete-all-modal" tab-index="-1" role="dialog" aria-labelledby="delete-all-modal-label" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+              <h4 id="delete-modal-lable" class="modal-title">Delete all</h4>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete all items?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-lemhannas btn-red">Yes, delete</button>
+              <button type="button" data-dismiss="modal" class="btn btn-lemhannas">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="edit-modal" tab-index="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+              <h4 id="edit-modal-lable" class="modal-title">Edit</h4>
+            </div>
+            <div class="modal-body">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Local IP</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type local IP here..." value="192.168.0.193" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Local port</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type local port here..." value="28410" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Remote IP</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type remote IP here..." value="61.94.225.166" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Remote port</label>
+                  <div class="col-lg-9">
+                    <input type="text" placeholder="type remote port here..." value="28140" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Protocol</label>
+                  <div class="col-lg-9">
+                    <select class="form-control">
+                      <option>TCP</option>
+                      <option>UDP</option>
+                      <option>Both</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Direction</label>
+                  <div class="col-lg-9">
+                    <select class="form-control">
+                      <option>In</option>
+                      <option>Out</option>
+                      <option>Both</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Status</label>
+                  <div class="col-lg-9">
+                    <select class="form-control">
+                      <option>Enabled</option>
+                      <option>Disabled</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-lemhannas">Edit</button>
+              <button type="button" data-dismiss="modal" class="btn btn-lemhannas">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="delete-modal" tab-index="-1" role="dialog" aria-labelledby="delete-modal-label" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+              <h4 id="delete-modal-lable" class="modal-title">Delete</h4>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to delete the selected item?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-lemhannas btn-red">Yes, delete</button>
+              <button type="button" data-dismiss="modal" class="btn btn-lemhannas">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- include port-and-services-->
+      <!-- include alert-and-notification-->
+    </div>
+  </div>
+</body>

@@ -1,0 +1,82 @@
+doctype 5
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  title Lemhannas
+  meta(name="description", content="Lemhannas Dashboard")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  // Favicons
+  link(rel="apple-touch-icon-precomposed", href="apple-touch-icon-precomposed.png")
+  link(rel="shortcut icon", href="favicon.ico")
+
+  link(rel="stylesheet", href="css/bootstrap.min.css")
+  link(rel="stylesheet", href="css/rulycon.min.css")
+  link(rel="stylesheet", href="css/lemhannas.css")
+
+  // Scripts
+  script(src="js/jquery-1.7.2.min.js")
+  script(src="js/bootstrap.min.js")
+  script(src="js/vendor/highchart/highstock.js")
+  script(src="js/vendor/highchart/modules/exporting.js")
+
+body
+  #main-container
+    #sidebar
+      .row
+        .col-lg-12
+          .accent
+          img(src="img/logo-lemhannas.png", alt="Lemhannas").logo
+          #user-menu
+            p.text-center
+              a(href="#")
+                span(class="rulycon-user-4")
+                | User settings
+              a(href="#")
+                span(class="rulycon-switch")
+                | Sign out
+          #dashboard-menu
+            h6 Dashboard menu
+            ul
+              li
+                a(href="index.html")
+                  span(class="rulycon-home")
+                  | Home
+              li
+                a(href="vulnerable-check.html")
+                  span(class="rulycon-bug")
+                  | Vulnerable check
+              li
+                a(href="mac-address-log.html")
+                  span(class="rulycon-file")
+                  | MAC address log
+              li
+                a(href="access-history.html")
+                  span(class="rulycon-upload-3")
+                  | Access history
+              li
+                a(href="bandwith-rules.html")
+                  span(class="rulycon-tree")
+                  | Bandwith rules
+              li
+                a(href="port-and-services.html")
+                  span(class="rulycon-switch")
+                  | Port &amp; Services
+              li
+                a(href="alert-and-notification.html")
+                  span(class="rulycon-spam")
+                  | Alert &amp; Notification
+
+      h6#copyright Hak cipta © 2013 Lembaga Ketahanan Nasional.
+        br
+        | Semua hak dilindungi.
+    #content
+      // include index
+      // include vulnerable-check
+      // include mac-address-log
+      // include mac-address-log-detail
+      // include access-history
+      // include access-history-detail
+      // include bandwith-rules
+      // include port-and-services
+      include alert-and-notification

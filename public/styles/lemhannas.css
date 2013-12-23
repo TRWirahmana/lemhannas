@@ -118,8 +118,9 @@ label {
   text-transform: uppercase;
 }
 label select, label input {
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 2px;
 }
 
 textarea {
@@ -647,4 +648,33 @@ hr {
 
 .dataTables_filter {
   float: right;
+}
+
+.dataTables_processing {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: rgba(137, 65, 158, 0.25);
+  padding: 6px 24px;
+  border-radius: 4px;
+}
+
+.dataTables_info {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.dataTables_paginate {
+  text-align: center;
+}
+.dataTables_paginate .first, .dataTables_paginate .previous, .dataTables_paginate .next, .dataTables_paginate .last, .dataTables_paginate span > a.ui-state-default {
+  color: #efd5f6;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 0 2px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
 }

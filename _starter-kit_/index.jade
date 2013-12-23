@@ -1,0 +1,56 @@
+// HOME PAGE
+.row
+  .col-lg-12
+    h1#page-title
+      span ·
+        span·
+        |· Dashboard ·
+        span·
+        | ·
+
+.row
+  .col-lg-12
+    #summary-wrapper
+      ul.nav.nav-tabs#summary-tab
+        li.active
+          a(href="#bandwith-usage-summary", data-toggle="tab") Bandwith usage summary
+        li
+          a(href="#vulnerability-summary", data-toggle="tab") Vulnerability summary
+      .tab-content#summary-tab-content
+        .tab-pane.active#bandwith-usage-summary
+          #chart-container
+            #bandwith-usage-summary
+        .tab-pane#vulnerability-summary
+          #chart-container
+            #vulnerability-summary
+
+script.
+  $(document).ready(function() {
+    $(function() {
+      $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+        // Create the chart
+        window.chart = new Highcharts.StockChart({
+          chart : { renderTo : 'bandwith-usage-summary' },
+          rangeSelector : { selected : 1 },
+          title : { text : 'Bandwith Usage summary' },
+          series : [{ name : 'AAPL', data : data, tooltip: { yDecimals: 2 } }]
+        });
+      });
+    });
+
+    $(function() {
+      $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+        // Create the chart
+        window.chart = new Highcharts.StockChart({
+          chart : { renderTo : 'vulnerability-summary' },
+          rangeSelector : { selected : 1 },
+          title : { text : 'Vulnerability summary' },
+          series : [{
+            name : 'AAPL Stock Price', data : data, marker : { enabled : true, radius : 3 },
+            shadow : true,
+            tooltip : { yDecimals : 2 }
+          }]
+        });
+      });
+    });
+  });

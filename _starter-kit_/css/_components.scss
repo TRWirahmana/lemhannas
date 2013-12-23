@@ -1,0 +1,165 @@
+// BUTTON COMPONENT
+.btn {
+  color: #ffffff;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  padding: 3px 24px;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
+
+  &.btn-lemhannas {
+    background: $light-purple;
+    color: #ffffff;
+  }
+
+  &.btn-red {
+    background: $alert-red;
+    color: #ffffff;
+  }
+
+  &.btn-green {
+    background: $alert-green;
+    color: #ffffff;
+  }
+
+  &:hover, &:hover > span[class*="rulycon"] {
+    background: auto;
+    color: #ffffff;
+    opacity: .85;
+  }
+}
+
+// FORM WRAPPER
+.form-inline {
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  .form-group {
+    display: block;
+  }
+
+  input, select {
+    margin-left: 12px;
+    margin-right: 24px;
+  }
+}
+.form-horizontal {
+  .control-label {
+    text-align: left;
+  }
+}
+
+// FORM COMPONENTS
+input, textarea, select,
+.form-control {
+  border-radius: 2px;
+  box-shadow: none;
+  padding: 2px 4px 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+textarea {
+  resize: none;
+}
+
+// HIGHCHARTS COMPONENT
+.highcharts-container {
+  display: block;
+  width: 100% !important;
+}
+
+// MODAL COMPONENT
+.modal {
+  .modal-content {
+    border-radius: 2px;
+    border: none;
+  }
+  .modal-header {
+    background: $light-purple;
+    border: 1px solid $light-purple-accent-1;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 2px 2px 0 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    & > h4 {
+      font-family: "segoe_condensedbold", sans-serif;
+      color: $light-purple-text;
+      font-size: 16px;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+    }
+
+    & > button {
+      font-size: 18px;
+      color: $light-purple-text;
+      opacity: 1;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+    }
+  }
+  .modal-body {
+    padding: 25px;
+  }
+}
+.modal-backdrop {
+  background: rgba(255, 255, 255, 0.75);
+
+  &.in {
+    opacity: 1;
+    filter: alpha(opacity=1);
+  }
+}
+
+// TAB COMPONENT
+.nav.nav-tabs {
+  margin-top: 12px;
+  border-bottom: 1px solid $light-purple;
+
+  li > a, .active > a:hover {
+    border: 1px solid $light-purple;
+    border-bottom: 1px solid transparent;
+    border-radius: 2px 2px 0 0;
+    color: $light-purple;
+  }
+}
+.tab-content {
+  .tab-pane {
+    background: #ffffff;
+    border: 1px solid $light-purple;
+    border-top: 1px solid transparent;
+    border-radius: 0;
+  }
+}
+
+// TABLE COMPONENT
+.table {
+  th {
+    text-transform: uppercase;
+    color: $light-purple-text;
+    background: $light-purple;
+    font-size: 12px;
+  }
+
+  a {
+    color: $light-purple;
+    border-bottom: 1px dashed $light-purple;
+
+    &:hover {
+      color: $dark-purple;
+      border-bottom: 1px dashed $dark-purple;
+      text-decoration: none;
+    }
+  }
+
+  .danger {
+    color: $alert-red;
+
+    td { background: rgba($alert-red, 0.15) !important; }
+  }
+
+  .warning {
+    color: $alert-yellow;
+
+    td { background: rgba($alert-yellow, 0.15) !important; }
+  }
+}

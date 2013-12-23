@@ -1,0 +1,44 @@
+// ALERT AND NOTIFICATION PAGE
+.row
+  .col-lg-12
+    h1#page-title
+      span ·
+        span·
+        |· Alert &amp; Notification ·
+        span·
+        | ·
+
+.row
+  .col-lg-6.col-lg-offset-3
+    h4 Notification type
+    p Please check the desired notification type you want to received from the system.
+    form
+      .checkbox
+        label
+          input(type="checkbox", value="")
+          | Unregistered MAC address
+      .checkbox
+        label
+          input(type="checkbox", value="")
+          | Unregistered port connection
+      .checkbox
+        label
+          input(type="checkbox", value="")
+          | Vulnerability warning
+
+.row
+  .col-lg-6.col-lg-offset-3
+    h4 Notification recipient
+    p Fill out the recipient data on the form below.
+    form.form-horizontal
+      .form-group
+        label.control-label.col-lg-3 Email address
+        .col-lg-9
+          input.form-control(type="email", placeholder="type email address here...")
+      .form-group
+        label.control-label.col-lg-3 Phone number
+        .col-lg-9
+          input.form-control(type="text", placeholder="type phone number here...")
+      .form-group
+        .col-lg-9.col-lg-offset-3
+          button.btn.btn-lemhannas Save

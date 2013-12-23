@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lemhannas</title>
+  <meta name="description" content="Lemhannas Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/rulycon.min.css">
+  <link rel="stylesheet" href="css/lemhannas.css">
+  <!-- Scripts-->
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/vendor/highchart/highstock.js"></script>
+  <script src="js/vendor/highchart/modules/exporting.js"></script>
+</head>
+<body>
+  <div id="main-container">
+    <div id="sidebar">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accent"></div><img src="img/logo-lemhannas.png" alt="Lemhannas" class="logo">
+          <div id="user-menu">
+            <p class="text-center"><a href="#"><span class="rulycon-user-4"></span>User settings</a><a href="#"><span class="rulycon-switch"></span>Sign out</a></p>
+          </div>
+          <div id="dashboard-menu">
+            <h6>Dashboard menu</h6>
+            <ul>
+              <li><a href="index.html"><span class="rulycon-home"></span>Home</a></li>
+              <li><a href="vulnerable-check.html"><span class="rulycon-bug"></span>Vulnerable check</a></li>
+              <li><a href="mac-address-log.html"><span class="rulycon-file"></span>MAC address log</a></li>
+              <li><a href="access-history.html"><span class="rulycon-upload-3"></span>Access history</a></li>
+              <li><a href="bandwith-rules.html"><span class="rulycon-tree"></span>Bandwith rules</a></li>
+              <li><a href="port-and-services.html"><span class="rulycon-switch"></span>Port &amp; Services</a></li>
+              <li><a href="alert-and-notification.html"><span class="rulycon-spam"></span>Alert &amp; Notification</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h6 id="copyright">Hak cipta © 2013 Lembaga Ketahanan Nasional.<br>Semua hak dilindungi.</h6>
+    </div>
+    <div id="content">
+      <!-- include index-->
+      <!-- include vulnerable-check-->
+      <!-- include mac-address-log-->
+      <!-- include mac-address-log-detail-->
+      <!-- include access-history-->
+      <!-- ACCESS HISTORY DETAIL PAGE-->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 id="page-title"><span>·<span>·</span>· Access history detail of 192.168.0.193 ·<span>·</span>·</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>IP address</label>
+              <input type="text" placeholder="IP address" value="192.168.0.193" disabled="disabled">
+              <label>Hostname</label>
+              <input type="text" placeholder="IP address" value="fulan-04-PC" disabled="disabled">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="chart-container">
+            <div id="bandwith-usage-area"></div>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Start time
+                <select>
+                  <option>~select start time~</option>
+                  <option>ganti pake date picker</option>
+                </select>
+                <label>End time</label>
+                <select>
+                  <option>~select end time~</option>
+                  <option>ganti pake date picker</option>
+                </select>
+                <button class="btn btn-lemhannas">Show bandwith usage detail</button>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th>Target IP</th>
+                <th>Hostname</th>
+                <th>Port</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.0.0.1</td>
+                <td>Facebook</td>
+                <td>80</td>
+                <td>13-12-2013 17:15:11</td>
+              </tr>
+              <tr>
+                <td>1.0.0.2</td>
+                <td>Twitter</td>
+                <td>80</td>
+                <td>13-12-2013 15:45:09</td>
+              </tr>
+              <tr>
+                <td>1.0.0.3</td>
+                <td>Pinterest</td>
+                <td>80</td>
+                <td>13-12-2013 14:09:32</td>
+              </tr>
+              <tr>
+                <td>1.0.0.4</td>
+                <td>Playboy</td>
+                <td>80</td>
+                <td>13-12-2013 01:12:52</td>
+              </tr>
+            </tbody>
+          </table>
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Auto-update every</label>
+              <select>
+                <option>~select auto-update period~</option>
+                <option>15 detik</option>
+                <option>30 detik</option>
+                <option>1 menit</option>
+                <option>3 menit</option>
+                <option>5 menit</option>
+              </select>
+              <button class="btn btn-lemhannas pull-right">Refresh</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function() {
+          $(function() {
+            $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+              // Create the chart
+              window.chart = new Highcharts.StockChart({
+                chart : { renderTo : 'bandwith-usage-area' },
+                rangeSelector : { selected : 1 },
+                title : { text : 'Bandwith Usage for 192.168.0.193 in last 24 hours' },
+                series : [{ name : 'AAPL', data : data, tooltip: { yDecimals: 2 } }]
+              });
+            });
+          });
+        });
+      </script>
+      <!-- include bandwith-rules-->
+      <!-- include port-and-services-->
+      <!-- include alert-and-notification-->
+    </div>
+  </div>
+</body>

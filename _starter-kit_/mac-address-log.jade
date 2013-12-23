@@ -1,0 +1,202 @@
+// MAC ADDRESS LOG PAGE
+.row
+  .col-lg-12
+    h1#page-title
+      span ·
+        span·
+        |· MAC address log ·
+        span·
+        | ·
+
+.row
+  .col-lg-12
+    form.form-inline
+      .form-group
+        label Start time
+        select
+          option ~select start time~
+          option ganti pake date picker
+        label End time
+        select
+          option ~select end time~
+          option ganti pake date picker
+        button.btn.btn-lemhannas Show MAC address log
+
+.row
+  .col-lg-12
+    table.table.table-hover.table-striped#mac-address-log-table
+      thead
+        tr
+          th #
+          th MAC
+          th Hostname
+          th Operating system
+          th Bandwith usage
+          th Status
+          th Modify
+      tbody
+        tr
+          td 1
+          td 00-00
+          td
+            a(href="mac-address-log-detail.html") fulan-01-PC
+          td Microsoft Windows 7 x86
+          td 1200 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 2
+          td 00-01
+          td
+            a(href="mac-address-log-detail.html") fulan-02-PC
+          td Redhat Enterprise Linux 1.0
+          td 1200 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 3
+          td 00-02
+          td
+            a(href="mac-address-log-detail.html") fulan-03-PC
+          td Microsoft Windows 8 x64
+          td 1200 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 4
+          td 00-03
+          td
+            a(href="mac-address-log-detail.html") fulan-04-PC
+          td Microsoft Windows 8 x64
+          td 1200 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 5
+          td 00-04
+          td
+            a(href="mac-address-log-detail.html") fulan-05-PC
+          td Microsoft Windows 7 x64
+          td 1200 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr.danger
+          td 6
+          td 00-05
+          td
+            a(href="mac-address-log-detail.html") fulan-06-PC
+          td Ubuntu 12.0.1
+          td 1200 Mbps
+          td unregistered
+          td
+            a.btn.btn-green(href="#add-modal", data-toggle="modal")
+              span.rulycon-plus
+        tr
+          td 7
+          td 00-06
+          td
+            a(href="mac-address-log-detail.html") multimedia-01-PC
+          td Microsoft Windows XP
+          td 3000 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr.warning
+          td 8
+          td 00-07
+          td
+            a(href="mac-address-log-detail.html") multimedia-02-PC
+          td Microsoft Windows XP
+          td 3000 Mbps
+          td blocked
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 9
+          td 00-08
+          td
+            a(href="mac-address-log-detail.html") multimedia-03-PC
+          td MacOS X Mavericks
+          td 3000 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+        tr
+          td 10
+          td 00-09
+          td
+            a(href="mac-address-log-detail.html") multimedia-04-PC
+          td MacOS X Mavericks
+          td 3000 Mbps
+          td registered
+          td
+            a.btn.btn-red(href="#delete-modal", data-toggle="modal")
+              span.rulycon-close
+
+    form.form-inline
+      .form-group
+        label Auto-update every
+        select
+          option ~select auto-update period~
+          option 15 detik
+          option 30 detik
+          option 1 menit
+          option 3 menit
+          option 5 menit
+        button.btn.btn-lemhannas.pull-right Refresh
+
+// PUT ALL MODALS BELOW
+.modal.fade#add-modal(tab-index="-1", role="dialog", aria-labelledby="add-modal-label", aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+        h4.modal-title#add-modal-lable Add
+      .modal-body
+        form.form-horizontal(role="form")
+          .form-group
+            label.col-lg-3.control-label MAC address
+            .col-lg-9
+              input.form-control(type="text", placeholder="type MAC address here...", value="192.168.0.193")
+          .form-group
+            label.col-lg-3.control-label Hostname
+            .col-lg-9
+              input.form-control(type="text", placeholder="type hostname here...", value="fulan-06-PC")
+          .form-group
+            label.col-lg-3.control-label Description
+            .col-lg-9
+              textarea.form-control(rows="4", placeholder="type description here...")
+          .form-group
+            label.col-lg-3.control-label Is blocked
+            .col-lg-9
+              .checkbox
+                label
+                  input(type="checkbox")
+      .modal-footer
+        button.btn.btn-lemhannas(type="button") Add
+        button.btn.btn-lemhannas(type="button", data-dismiss="modal") Cancel
+
+.modal.fade#delete-modal(tab-index="-1", role="dialog", aria-labelledby="delete-modal-label", aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type="button", data-dismiss="modal", aria-hidden="true") ×
+        h4.modal-title#delete-modal-lable Delete
+      .modal-body
+        p Are you sure you want to delete the selected item?
+      .modal-footer
+        button.btn.btn-lemhannas.btn-red(type="button") Yes, delete
+        button.btn.btn-lemhannas(type="button", data-dismiss="modal") Cancel

@@ -1,0 +1,71 @@
+// MAC ADDRESS LOG DETAIL PAGE
+.row
+  .col-lg-12
+    h1#page-title
+      span ·
+        span·
+        |· MAC address 00-06 log detail ·
+        span·
+        | ·
+
+.row
+  .col-lg-12
+    form.form-inline
+      .form-group
+        label Start time
+        select
+          option ~select start time~
+          option ganti pake date picker
+        label End time
+        select
+          option ~select end time~
+          option ganti pake date picker
+        button.btn.btn-lemhannas Show log details
+
+.row
+  .col-lg-12
+    table.table.table-hover.table-striped
+      thead
+        tr
+          th #
+          th Opened port
+          th Service name
+          th Status
+      tbody
+        tr
+          td 1
+          td 8080
+          td Application name 01
+          td registered
+        tr.danger
+          td 2
+          td 8081
+          td Application name 02
+          td unregistered
+        tr.warning
+          td 3
+          td 3060
+          td System app name 01
+          td warning
+        tr
+          td 4
+          td 3065
+          td Application name 03
+          td registered
+        tr
+          td 5
+          td 9001
+          td Application name 04
+          td registered
+
+    form.form-inline
+      .form-group
+        label Auto-update every
+        select
+          option ~select auto-update period~
+          option 15 detik
+          option 30 detik
+          option 1 menit
+          option 3 menit
+          option 5 menit
+        button.btn.btn-lemhannas.pull-right Refresh

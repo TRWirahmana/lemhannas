@@ -1,0 +1,96 @@
+// ACCESS HISTORY DETAIL PAGE
+.row
+  .col-lg-12
+    h1#page-title
+      span ·
+        span·
+        |· Access history detail of 192.168.0.193 ·
+        span·
+        | ·
+
+.row
+  .col-lg-12
+    form.form-inline
+      .form-group
+        label IP address
+        input(type="text", placeholder="IP address", value="192.168.0.193", disabled="disabled")
+        label Hostname
+        input(type="text", placeholder="IP address", value="fulan-04-PC", disabled="disabled")
+
+.row
+  .col-lg-12
+    #chart-container
+      #bandwith-usage-area
+    hr
+
+.row
+  .col-lg-12
+    form.form-inline
+      .form-group
+        label Start time
+          select
+            option ~select start time~
+            option ganti pake date picker
+          label End time
+          select
+            option ~select end time~
+            option ganti pake date picker
+          button.btn.btn-lemhannas Show bandwith usage detail
+
+.row
+  .col-lg-12
+    table.table.table-hover.table-striped
+      thead
+        tr
+          th Target IP
+          th Hostname
+          th Port
+          th Time
+      tbody
+        tr
+          td 1.0.0.1
+          td Facebook
+          td 80
+          td 13-12-2013 17:15:11
+        tr
+          td 1.0.0.2
+          td Twitter
+          td 80
+          td 13-12-2013 15:45:09
+        tr
+          td 1.0.0.3
+          td Pinterest
+          td 80
+          td 13-12-2013 14:09:32
+        tr
+          td 1.0.0.4
+          td Playboy
+          td 80
+          td 13-12-2013 01:12:52
+
+    form.form-inline
+      .form-group
+        label Auto-update every
+        select
+          option ~select auto-update period~
+          option 15 detik
+          option 30 detik
+          option 1 menit
+          option 3 menit
+          option 5 menit
+        button.btn.btn-lemhannas.pull-right Refresh
+
+script.
+  $(document).ready(function() {
+    $(function() {
+      $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+        // Create the chart
+        window.chart = new Highcharts.StockChart({
+          chart : { renderTo : 'bandwith-usage-area' },
+          rangeSelector : { selected : 1 },
+          title : { text : 'Bandwith Usage for 192.168.0.193 in last 24 hours' },
+          series : [{ name : 'AAPL', data : data, tooltip: { yDecimals: 2 } }]
+        });
+      });
+    });
+  });
